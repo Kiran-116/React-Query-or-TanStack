@@ -1,0 +1,76 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "First Post",
+      "content": "This is the content of the first post.",
+      "tags": ["tag1", "tag2"]
+    },
+    {
+      "id": 2,
+      "title": "Second Post",
+      "content": "This is the content of the second post.",
+      "tags": ["tag3", "tag4"]
+    },
+    {
+      "id": 3,
+      "title": "Third Post",
+      "content": "This is the content of the third post.",
+      "tags": ["tag5", "tag6"]
+    },
+    {
+      "id": 4,
+      "title": "Fourth Post",
+      "content": "This is the content of the fourth post.",
+      "tags": ["tag7", "tag8"]
+    },
+    {
+      "id": 5,
+      "title": "Fifth Post",
+      "content": "This is the content of the fifth post.",
+      "tags": ["tag9", "tag10"]
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "tag1"
+    },
+    {
+      "id": 2,
+      "name": "tag2"
+    },
+    {
+      "id": 3,
+      "name": "tag3"
+    },
+    {
+      "id": 4,
+      "name": "tag4"
+    },
+    {
+      "id": 5,
+      "name": "tag5"
+    },
+    {
+      "id": 6,
+      "name": "tag6"
+    },
+    {
+      "id": 7,
+      "name": "tag7"
+    },
+    {
+      "id": 8,
+      "name": "tag8"
+    },
+    {
+      "id": 9,
+      "name": "tag9"
+    },
+    {
+      "id": 10,
+      "name": "tag10"
+    }
+  ]
+}
