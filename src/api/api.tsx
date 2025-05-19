@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "https://jsonplaceholder.typicode.com",
-})
+  baseURL: "https://jsonplaceholder.typicode.com",
+});
 
 interface Post {
   id: number;
@@ -11,7 +11,23 @@ interface Post {
 }
 
 // To fetch the data:
-export const fetchPosts = async () : Promise<Post[]> => {
-    const resp =  await api.get("/posts?_start=0&_limit=3");
+export const fetchPosts = async (): Promise<Post[]> => {
+  try {
+    const resp = await api.get("/posts?_start=0&_limit=3");
     return resp.status === 200 ? resp.data : [];
-}
+  } catch (error) {
+    console.error("Error fetching posts:", error);
+    throw error;
+  }
+};
+
+// to fetch individual data:
+export const fetchInvPost = async (id: string): Promise<Post> => {
+  try {
+    const resp = await api.get(`/posts/${id}`);
+    return resp.status === 200 ? resp.data : { id: 0, title: "", body: "" };
+  } catch (error) {
+    console.error("Error fetching individual post:", error);
+    throw error;
+  }
+};

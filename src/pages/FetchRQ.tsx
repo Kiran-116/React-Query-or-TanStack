@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchPosts } from "../api/api";
+import { NavLink } from "react-router-dom";
 
 const FetchRQ = () => {
   const { data, isPending, isError, error } = useQuery({
@@ -26,8 +27,11 @@ const FetchRQ = () => {
           const { id, title, body } = post;
           return (
             <li key={id}>
-              <h3>{title}</h3>
-              <p>{body}</p>
+              <NavLink to={`/rq/${id}`}>
+                <p>{id}</p>
+                <h3>{title}</h3>
+                <p>{body}</p>
+              </NavLink>
             </li>
           );
         })}
