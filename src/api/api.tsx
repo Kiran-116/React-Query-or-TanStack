@@ -12,6 +12,6 @@ interface Post {
 
 // To fetch the data:
 export const fetchPosts = async () : Promise<Post[]> => {
-    const resp =  await api.get("/posts");
+    const resp =  await api.get("/posts?_start=0&_limit=3");
     return resp.status === 200 ? resp.data : [];
 }
