@@ -5,6 +5,7 @@ const FetchRQ = () => {
   const { data, isPending, isError, error } = useQuery({
     queryKey: ["posts"], // Use State
     queryFn: fetchPosts, // Use Effect
+    gcTime: 1000, // Garbage Collection Time
   });
 
   if (isPending) {
