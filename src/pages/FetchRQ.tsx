@@ -6,7 +6,9 @@ const FetchRQ = () => {
     queryKey: ["posts"], // Use State
     queryFn: fetchPosts, // Use Effect
     // gcTime: 1000, // Garbage Collection Time
-    staleTime: 10000, // Stale Time (10s)
+    // staleTime: 10000, // Stale Time (10s) -> by default 0
+    refetchInterval: 1000, // Refetch Interval (1s)
+    refetchIntervalInBackground: true, // Refetch in Background
   });
 
   if (isPending) {
