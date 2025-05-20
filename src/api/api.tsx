@@ -11,9 +11,9 @@ interface Post {
 }
 
 // To fetch the data:
-export const fetchPosts = async (): Promise<Post[]> => {
+export const fetchPosts = async (pageNumber: number): Promise<Post[]> => {
   try {
-    const resp = await api.get("/posts?_start=0&_limit=3");
+    const resp = await api.get(`/posts?_start=${pageNumber}&_limit=3`);
     return resp.status === 200 ? resp.data : [];
   } catch (error) {
     console.error("Error fetching posts:", error);
