@@ -4,7 +4,7 @@ const api = axios.create({
   baseURL: "https://jsonplaceholder.typicode.com",
 });
 
-interface Post {
+export interface Post {
   id: number;
   title: string;
   body: string;
@@ -30,4 +30,8 @@ export const fetchInvPost = async (id: string): Promise<Post> => {
     console.error("Error fetching individual post:", error);
     throw error;
   }
+};
+
+export const deletePost = (id: number): Promise<Post> => {
+  return api.delete(`/posts/${id}`);
 };
